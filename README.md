@@ -25,6 +25,8 @@ Email: Mick.Morrow@telent.com
 Mobile: 07974398922
 Web: www.telent.com
 
+***
+
 IS-IS (Intermediate System to Intermediate System) is a **link-state interior gateway routing protocol** designed to efficiently exchange routing information within a single autonomous system (AS). Here's a concise overview:
 
 ***
