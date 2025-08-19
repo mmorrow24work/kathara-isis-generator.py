@@ -1,4 +1,4 @@
-# kathara-isis-generator
+# kathara-isis-generator.py
 
 Creating the startup files for a complex kathara network would be very difficult and very time consuming if done manually,
 so best practice is to create them using a programmatic method in the same way we create startup scripts for routers and switches.
