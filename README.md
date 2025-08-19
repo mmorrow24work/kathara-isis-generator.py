@@ -83,7 +83,7 @@ IS-IS (Intermediate System to Intermediate System) is a **link-state interior ga
 
 ***
 
-Let me know if you want a deeper dive into IS-IS packet types, configuration examples, or comparisons to other protocols like OSPF!
+### Reference material:
 
 [1] https://jumpcloud.com/it-index/what-is-is-is-intermediate-system-to-intermediate-system
 [2] https://30dayscoding.com/blog/isis-routing-protocol-guide
