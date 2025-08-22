@@ -18,7 +18,7 @@ This code was created using AI (https://claude.ai/) based on the following promp
 
 ***
 
-Create a Python3 script that reads a kathara lab.conf file as input and will output all the kathara startup files.
+Create a Python3 script ( kathara-isis-generator.py ) that reads a kathara lab.conf file as input and will output all the kathara startup files.
 
 Use IS-IS routing and assign IPs to all interfaces and check that they are online and use the most appropriate subnet masks - 
 e.g. use /30 networks for point-to-point connections and /29 networks elsewhere if possible, otherwise use /28 or /27 etc. 
