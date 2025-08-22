@@ -95,3 +95,49 @@ IS-IS (Intermediate System to Intermediate System) is a **link-state interior ga
 [8] https://www.cisco.com/site/us/en/products/networking/software/ios-nx-os/intermediate-system-to-intermediate-system-is-is/index.html
 [9] https://www.pynetlabs.com/introduction-to-is-is-protocol/
 [10] https://www.routeralley.com/guides/isis.pdf
+
+***
+
+A Docker container running **FRR** (FRRouting) with **IS-IS** protocol enabled acts as a **Layer 3 router**, *not* a Layer 2 switch.
+
+### Why?
+
+- **IS-IS** is a Layer 3 (network layer) routing protocol. It is used for exchanging IP routing information between routers to build dynamic IP routing tables and make Layer 3 forwarding decisions.[1][2][3]
+- The default use-case for **FRR** and IS-IS is to route packets between different networks and subnets based on IP addresses, not to perform Layer 2 switching (which forwards Ethernet frames inside the same subnet or VLAN).
+
+### Details:
+
+- A Layer 3 router (using IS-IS in FRR) makes decisions based on destination IP addresses and routes traffic between subnets.
+- A Layer 2 switch operates at the data link layer (Ethernet), forwarding traffic based on MAC addresses—FRR and IS-IS do *not* provide this capability natively.
+- Docker containers running FRR/IS-IS communicate via routed (L3) interfaces; bridging and switching would require extra Linux bridge configuration outside of FRR.
+
+### Both?
+FRR can participate in some Layer 2 features (e.g., bridging, VXLAN, EVPN using BGP), but **IS-IS** is strictly a Layer 3 protocol. Unless you specifically add Linux bridging into the networking setup (outside of FRR), a container running only FRR+IS-IS will not serve as a switch.[2][1]
+
+***
+
+**Summary:**  
+A Docker container running FRR with IS-IS enabled is a **Layer 3 router**, not a Layer 2 switch. It routes IP packets between networks using the IS-IS protocol.[1][2]
+
+Let me know if you want to know how to configure L2 switching or hybrid setups with containers!
+
+[1](https://isis.bgplabs.net/basic/0-frrouting/
+[2](https://docs.frrouting.org/en/stable-8.0/isisd.html
+[3](https://docs.frrouting.org/en/latest/isisd.html
+[4](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-sy/irs-15-sy-book/irs-ipv4-lfafrr.html
+[5](https://github.com/FRRouting/frr/issues/12793
+[6](https://www.cisco.com/c/en/us/td/docs/routers/asr920/configuration/guide/mpls/17-1-1/b-mp-l2-vpns-xe-17-1-asr920/m_loop-free-asr920.html
+[7](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-s/irs-15-s-book/irs-rmte-lfa-frr.pdf
+[8](https://github.com/FRRouting/frr/issues/6965
+[9](https://github.com/FRRouting/frr/issues/4872
+[10](https://support.huawei.com/enterprise/en/doc/EDOC1100459443/ff483841/example-for-configuring-is-is-auto-frr-ip-protecting-ip
+[11](https://docs.frrouting.org/en/stable-8.3/installation.html
+[12](https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.html
+[13](https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.pdf)
+[14](https://github.com/FRRouting/frr/issues/13950)
+[15](https://info.support.huawei.com/hedex/api/pages/EDOC1100277644/AEM10221/04/resources/vrp/feature_0003998201.html)
+[16](https://lists.fd.io/g/vpp-dev/topic/isis_with_vpp_frr/93683140)
+[17](https://isis.bgplabs.net/1-setup/)
+[18](https://www.uni-koeln.de/~pbogusze/posts/FRRouting_IS-IS_Segment_Routing_tech_demo.html)
+[19](https://www.cisco.com/c/en/us/td/docs/routers/ncs4200/configuration/guide/mpls/mp-l2-vpns-ncs4200-book/mp-l2-vpns-ncs4200-book_chapter_0101.html)
+[20](https://www.juniper.net/documentation/us/en/software/junos/is-is/topics/concept/isis-node-link-protection-understanding.html)
