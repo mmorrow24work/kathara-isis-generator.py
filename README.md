@@ -129,7 +129,7 @@ A Docker container running FRR with IS-IS enabled is a **Layer 3 router**, not a
 [6] https://www.cisco.com/c/en/us/td/docs/routers/asr920/configuration/guide/mpls/17-1-1/b-mp-l2-vpns-xe-17-1-asr920/m_loop-free-asr920.html
 [7] https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-s/irs-15-s-book/irs-rmte-lfa-frr.pdf
 [8] https://github.com/FRRouting/frr/issues/6965
-[9] ttps://github.com/FRRouting/frr/issues/4872
+[9] https://github.com/FRRouting/frr/issues/4872
 [10] https://support.huawei.com/enterprise/en/doc/EDOC1100459443/ff483841/example-for-configuring-is-is-auto-frr-ip-protecting-ip
 [11] https://docs.frrouting.org/en/stable-8.3/installation.html
 [12] https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.html
