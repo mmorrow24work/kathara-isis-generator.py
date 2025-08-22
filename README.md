@@ -119,25 +119,25 @@ FRR can participate in some Layer 2 features (e.g., bridging, VXLAN, EVPN using 
 **Summary:**  
 A Docker container running FRR with IS-IS enabled is a **Layer 3 router**, not a Layer 2 switch. It routes IP packets between networks using the IS-IS protocol.[1][2]
 
-Let me know if you want to know how to configure L2 switching or hybrid setups with containers!
+### Reference material:
 
-[1](https://isis.bgplabs.net/basic/0-frrouting/
-[2](https://docs.frrouting.org/en/stable-8.0/isisd.html
-[3](https://docs.frrouting.org/en/latest/isisd.html
-[4](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-sy/irs-15-sy-book/irs-ipv4-lfafrr.html
-[5](https://github.com/FRRouting/frr/issues/12793
-[6](https://www.cisco.com/c/en/us/td/docs/routers/asr920/configuration/guide/mpls/17-1-1/b-mp-l2-vpns-xe-17-1-asr920/m_loop-free-asr920.html
-[7](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-s/irs-15-s-book/irs-rmte-lfa-frr.pdf
-[8](https://github.com/FRRouting/frr/issues/6965
-[9](https://github.com/FRRouting/frr/issues/4872
-[10](https://support.huawei.com/enterprise/en/doc/EDOC1100459443/ff483841/example-for-configuring-is-is-auto-frr-ip-protecting-ip
-[11](https://docs.frrouting.org/en/stable-8.3/installation.html
-[12](https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.html
-[13](https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.pdf)
-[14](https://github.com/FRRouting/frr/issues/13950)
-[15](https://info.support.huawei.com/hedex/api/pages/EDOC1100277644/AEM10221/04/resources/vrp/feature_0003998201.html)
-[16](https://lists.fd.io/g/vpp-dev/topic/isis_with_vpp_frr/93683140)
-[17](https://isis.bgplabs.net/1-setup/)
-[18](https://www.uni-koeln.de/~pbogusze/posts/FRRouting_IS-IS_Segment_Routing_tech_demo.html)
-[19](https://www.cisco.com/c/en/us/td/docs/routers/ncs4200/configuration/guide/mpls/mp-l2-vpns-ncs4200-book/mp-l2-vpns-ncs4200-book_chapter_0101.html)
-[20](https://www.juniper.net/documentation/us/en/software/junos/is-is/topics/concept/isis-node-link-protection-understanding.html)
+[1] https://isis.bgplabs.net/basic/0-frrouting/
+[2] https://docs.frrouting.org/en/stable-8.0/isisd.html
+[3] https://docs.frrouting.org/en/latest/isisd.html
+[4] https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-sy/irs-15-sy-book/irs-ipv4-lfafrr.html
+[5] https://github.com/FRRouting/frr/issues/12793
+[6] https://www.cisco.com/c/en/us/td/docs/routers/asr920/configuration/guide/mpls/17-1-1/b-mp-l2-vpns-xe-17-1-asr920/m_loop-free-asr920.html
+[7] https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/iproute_isis/configuration/15-s/irs-15-s-book/irs-rmte-lfa-frr.pdf
+[8] https://github.com/FRRouting/frr/issues/6965
+[9] ttps://github.com/FRRouting/frr/issues/4872
+[10] https://support.huawei.com/enterprise/en/doc/EDOC1100459443/ff483841/example-for-configuring-is-is-auto-frr-ip-protecting-ip
+[11] https://docs.frrouting.org/en/stable-8.3/installation.html
+[12] https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.html
+[13] https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/MPLS-LDP-FRR.pdf
+[14] https://github.com/FRRouting/frr/issues/13950
+[15] https://info.support.huawei.com/hedex/api/pages/EDOC1100277644/AEM10221/04/resources/vrp/feature_0003998201.html
+[16] https://lists.fd.io/g/vpp-dev/topic/isis_with_vpp_frr/93683140
+[17] https://isis.bgplabs.net/1-setup/
+[18] https://www.uni-koeln.de/~pbogusze/posts/FRRouting_IS-IS_Segment_Routing_tech_demo.html
+[19] https://www.cisco.com/c/en/us/td/docs/routers/ncs4200/configuration/guide/mpls/mp-l2-vpns-ncs4200-book/mp-l2-vpns-ncs4200-book_chapter_0101.html
+[20] https://www.juniper.net/documentation/us/en/software/junos/is-is/topics/concept/isis-node-link-protection-understanding.html
